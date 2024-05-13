@@ -1,0 +1,225 @@
+.main{
+    margin: 12px 12px;
+}
+a{
+    text-decoration: none;
+    color: #0a66c2;
+}
+.banner img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+.profile-logo img{
+    width: 120px;
+    border: 5px solid #fff;
+}
+.profile-wrapper{
+    background-color: #fff;
+    border-radius: 0 0 10px 10px;
+}
+.profile-wrapper .profile-wrap{
+    margin: -66px 20px 20px;
+}
+
+.profile-content >div h2{
+    margin: 5px 0 0;  
+}
+.profile-content >div  p{
+    margin: 3px auto 3px;
+}
+.profile-content >div span{
+    font-size: 13px;
+    color: #837878;
+}
+.profile-links{
+    display: flex;
+    gap: 10px;
+    margin: 10px auto;
+}
+.profile-links a{
+    text-decoration: none;
+    border: 1px solid #707074;
+    color: #707074;
+    padding: 4px 25px 5px;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: 600;
+}
+.profile-links .follow{
+    color: white;
+    background: #0a66c2;
+    border: 1px solid #0a66c2;
+}
+.visit-link{
+    color: #0a66c2 !important;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.navbar-wrapper ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding-left: 0;
+}
+.navbar-wrapper ul .nav-links{
+    text-decoration: none;
+    color: #949191;
+    font-weight: 600;
+}
+.navbar-wrapper ul .nav-links:hover{
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+.navbar-wrapper ul .nav-links.active{
+    color: green;
+    border-bottom: 2px solid green;
+}
+.profile-wrapper .navbar-wrapper{
+     margin: 20px 20px;
+     padding: 0 0 5px;
+}
+.about-container{
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 100px;
+ }  
+.about-container .about-wrapper{
+    padding: 10px 20px 14px;
+} 
+.about-grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.about-grid .grid-item {
+    border: 1px solid #d0c6c6ee;
+    border-radius: 6px;
+    padding: 10px;
+}
+.about-grid .grid-item .grid-infor{
+  
+    display: flex;
+    flex-direction: column;
+}
+ 
+.about-grid .grid-item .grid-infor  span{
+    font-size: 12px;
+    color: #a19797;
+}
+.about-grid .grid-item .grid-infor a{
+    color:#0a66c2;
+    text-decoration: none;
+}
+.text-grey{
+    color: #a19797; 
+}
+.show-more {
+    text-align: center;
+    padding: 6px 0 19px;
+ }
+.show-more a{
+    text-decoration: none;
+    color:#707074;
+ }
+ hr{
+    border-top: 1px solid #d3cfcf;
+ }
+ .about-content .about-item{
+    margin-bottom: 10px;
+ }
+ .about-content h5, .about-content h6{
+    margin: 0;
+     
+ }
+ .about-content .about-item h5{
+   font-size: 16px; 
+   font-weight: 600;
+   margin-bottom: 5px;
+ }
+ .about-content .about-item h6{
+    font-size: 15px;
+    font-weight: 400;
+    color:#a19797
+ }
+ .about-content .about-item  a{
+    font-weight: 500;
+ }
+ .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  .table tr th{
+    padding: 12px 5px;
+    font-weight: 400;
+    border-bottom: 1px solid #eee;
+    color: #5d5959;
+  }
+  th, td {
+    text-align: left;
+    padding: 8px;
+    font-size: 15px;
+    color: #949191;
+  }
+  tr:nth-child(even) {
+    border: 1px solid #eee;
+  }
+  .t-check{
+    display: flex;
+    align-items: start;
+    gap: 5px;
+  }
+  .t-check img{
+    border-radius: 5px;
+  }
+  .table-container{
+    background: #fff;
+    margin: 20px;
+    border-radius: 10px;
+  }
+  .table-options{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    align-items: center;
+  }
+  .table-options .table-del-expo{
+    display: flex;
+    gap: 10px;
+  }
+  .table-options .table-del-expo button{
+    background: #fff;
+    border: 1px solid #e0d9d9;
+    border-radius: 5px;
+    padding: 6px 18px;
+    color:#a8a0a0;
+    cursor: pointer;
+  }
+  .copy{
+    cursor: pointer;
+  }
+  .table-pagination{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+  }
+  .table-pagination .counting{
+
+  }
+  .table-pagination  .pagination ul{
+    display: flex;
+    list-style: none;
+    align-items: center
+  }
+  .table-pagination  .pagination ul a{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    border: 1px solid #cfc2c2;
+    justify-content: center;
+    align-items: center;
+    color: #a39494;
+  }
+  .table-pagination  .pagination ul a.active{
+     color:#ff0000
+  }
