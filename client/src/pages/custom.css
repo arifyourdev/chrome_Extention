@@ -176,6 +176,8 @@ a{
     background: #fff;
     margin: 20px;
     border-radius: 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
   }
   .table-options{
     display: flex;
@@ -222,4 +224,34 @@ a{
   }
   .table-pagination  .pagination ul a.active{
      color:#ff0000
+  }
+  .link-arrow{
+    width: 14px;
+    height: 14px;
+  }
+
+  @media screen and (max-width: 578px) {
+    .main {
+      margin: 0px 0px;
+    }
+    .banner img{
+      height: 125px;
+      object-fit: cover;
+    }
+    .profile-logo img{
+      width: 85px;
+    }
+    .profile-wrapper .profile-wrap {
+      margin: -41px 18px 20px;
+  }
+  .profile-links{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .navbar-wrapper{
+    overflow: scroll;
+  }
+  .about-grid{
+    grid-template-columns:auto
+  }
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import { FaExternalLinkAlt,FaArrowRight } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 const Profile = () => {
     return (
         <div className='profile-container'>
@@ -20,7 +20,7 @@ const Profile = () => {
                         </div>
                         <div className='profile-links'>
                             <Link className='follow'>+ Follow</Link>
-                            <Link className='visit-link'> Visit Website <FaExternalLinkAlt /></Link>
+                            <Link className='visit-link'> Visit Website <FaExternalLinkAlt className='link-arrow' /></Link>
                             <Link>More</Link>
                         </div>
                     </div>

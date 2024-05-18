@@ -1,6 +1,5 @@
 import React from 'react';
 import './custom.css';
-
 import {FaArrowRight } from "react-icons/fa";
 import Profile from '../components/Profile';
 

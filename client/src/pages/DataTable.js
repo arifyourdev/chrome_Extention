@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { data } from '../tableData'
+import { data as initialData } from '../tableData';
 import { FaRegCopy,FaAngleLeft,FaAngleRight  } from "react-icons/fa6";
 import { LiaFileExportSolid } from "react-icons/lia";
 import { Link } from 'react-router-dom';
 
 const DataTable = () => {
-    const itemsPerPage = 7;
+    const itemsPerPage = 10;
     const [currentPage, setCurrentPage] = useState(1);
+    const [data, setData] = useState(initialData);
   
     // Calculate total pages
     const totalPages = Math.ceil(data.length / itemsPerPage);
@@ -29,7 +30,7 @@ const DataTable = () => {
     const copyText = (text) =>{
         navigator.clipboard.writeText(text)
         .then(() =>{
-            console.log('Text copied to clipboard:', text);
+             alert(`${text} copy`)
         })
         .catch((error) => {
             console.error('Unable to copy text to clipboard:', error);
@@ -57,6 +58,37 @@ const DataTable = () => {
       }
     };
   
+    // Function to generate CSV
+    const exportToCSV = () => {
+      const headers = ['Name', 'HQ Location', 'EMPLOYEES', 'INDUSTRY', 'FOUNDED', 'WEBSITE', 'EMAIL'];
+      const rows = data.map(item => [
+          item.name,
+          item.location,
+          item.employee,
+          item.industry,
+          item.founded,
+          item.website,
+          item.email
+      ]);
+
+      let csvContent = "data:text/csv;charset=utf-8," + headers.join(",") + "\n" + rows.map(e => e.join(",")).join("\n");
+
+      const encodedUri = encodeURI(csvContent);
+      const link = document.createElement("a");
+      link.setAttribute("href", encodedUri);
+      link.setAttribute("download", "table_data.csv");
+      document.body.appendChild(link);
+
+      link.click();
+  };
+
+  // Function to delete selected rows
+  const deleteSelectedRows = () => {
+    const newData = data.filter((_, index) => !selectedRows.includes(index));
+    setData(newData);
+    setSelectedRows([]);
+  };
+
   return (
     <>
      <div className='table-container'>
@@ -66,15 +98,16 @@ const DataTable = () => {
                     <span>{selectedRows.length} selected</span>
                 </div>
                 <div className='table-del-expo'>
-                    <button>Delete</button>
-                    <button><LiaFileExportSolid/> Export as CSV</button>
+                    <button onClick={deleteSelectedRows}>Delete</button>
+                    <button onClick={exportToCSV}><LiaFileExportSolid/> Export as CSV</button>
                 </div>
             </div>
             <table className='table'>
                 <thead>
                     <tr>
-                        <th><input type='checkbox' name='chekc' onChange={handleSelectAll} checked={selectedRows.length === data.length} /></th>
-                        <th> Name</th>
+                        <th><input type='checkbox' name='check' onChange={handleSelectAll} 
+                        checked={selectedRows.length === data.length} /></th>
+                        <th>Name</th>
                         <th>HQ Location</th>
                         <th>EMPLOYEES</th>
                         <th>INDUSTRY</th>
